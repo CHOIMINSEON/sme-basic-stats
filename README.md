@@ -37,14 +37,14 @@
 
 <img width="1096" height="323" alt="image" src="https://github.com/user-attachments/assets/e7bec11d-dbc6-42af-b49b-f44137262eb6" />
 
-style = "quantile"
+* **style = "quantile"**
 
 등분위 분류 (Quantile) : 전체 기업을 20%씩 나눠 순위로 분류를 진행
 
-style = "jenks"
+**style = "jenks"**
 
 자연적 분류 (Jenks) : 데이터 간의 격차가 급격히 벌어지는 구간을 찾아 분류를 진행
 
-style = "equal"
+**style = "equal"**
 
 등간격 (Equal Interval) : 전체 기업의 매출을 똑같은 간격 5개로 나눠 분류를 진행
