@@ -20,6 +20,8 @@ sme-basic-stats/
 └── 📜 README.md # 프로젝트 설명서
  ```
 
+<br>
+
 ### [밀집지역 탐색 방법론]
 
 공간 통계 기법을 활용하여 중소기업 매출 및 분포의 공간적 패턴을 분석하고 시각화.
@@ -42,6 +44,8 @@ sme-basic-stats/
 * 매출액 등 데이터의 왜도(Skewness)를 고려하여 세 가지 분류 방식(**Quantile, Jenks, Equal Interval**)을 비교 분석하였습니다.
 * 이를 통해 단순 순위뿐만 아니라 실제 경제력 집중 현상을 다각도로 시각화하였습니다.
 
+
+<br>
 
 **Simulation Flowchart**
 
@@ -67,10 +71,14 @@ sme-basic-stats/
        └── Hotspot Analysis (핫스팟/콜드스팟 도출)
 ```
 
+<br>
+
 ### [밀집지역 핫스팟과 콜드스팟]
 
 <img width="423" height="546" alt="image" src="https://github.com/user-attachments/assets/2c40eeb2-4bee-4c94-bfbd-3a8c946530bc" />
 
+
+<br>
 
 ### [분류방법에 따른 기업체 매출액]
 
