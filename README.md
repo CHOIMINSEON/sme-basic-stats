@@ -3,7 +3,18 @@
 
 * **2015년부터 2020년까지 중소기업 밀집지역 및 성장, 소멸 지역을 지도로 시각화.**
   
-
+```text
+sme-basic-stats/
+├── 📂 R/ # 핵심 분석 코드
+│ ├── 1_전처리.R # [Step 1] 데이터 전처리
+│ ├── 2_shp결합.R # [Step 2] 공간 데이터 결합
+│ └── 3_공간통계.R # [Step 3] 공간통계 분석 및 시각화
+│
+├── 📜 Data_Preprocessing.R # 데이터 전처리 스크립트
+├── 📜 test.R # 테스트 스크립트
+├── 📜 test2.R # 테스트 스크립트 (2)
+└── 📜 README.md # 프로젝트 설명서
+ ```
 
 ### [밀집지역 탐색 방법론]
 
@@ -27,29 +38,27 @@
 * 매출액 등 데이터의 왜도(Skewness)를 고려하여 세 가지 분류 방식(**Quantile, Jenks, Equal Interval**)을 비교 분석하였습니다.
 * 이를 통해 단순 순위뿐만 아니라 실제 경제력 집중 현상을 다각도로 시각화하였습니다.
 
-''' text
-sme-basic-stats/
-├── 📜 1_전처리.R             # [Step 1] Data Preprocessing
-│   ├── Raw Data Load (txt)   # 전국 중소기업 원시 데이터 로드
-│   ├── Filtering             # 중소기업(S1, S2) 필터링
-│   └── Aggregation           # 행정동별(ZONE_CD) 매출/종사자 집계 (-> df.csv 생성)
-│
-├── 📜 2_shp결합.R             # [Step 2] Spatial Join
-│   ├── Shapefile Load        # 행정동 경계 지도(shp) 로드
-│   ├── Merge Data            # 집계된 데이터(df.csv)와 지도 결합
-│   └── Export                # 공간 정보가 포함된 통합 데이터 저장 (-> merge2.shp)
-│
-├── 📜 3_공간통계.R            # [Step 3] Spatial Analysis & Visualization
-│   ├── Classification        # 등급 분류 시각화 (Quantile, Jenks, Equal Interval)
-│   ├── Global Moran's I      # 전역적 공간 자기상관성 분석
-│   ├── Local Moran's I       # 국지적 군집 분석 (LISA)
-│   └── Hotspot Analysis      # Getis-Ord Gi* 핫스팟 도출
-│
-└── 📂 data/ (Not included)   # (참고) 입력 데이터 폴더
-    ├── sbcsExtr_... .txt     # 중소기업 통계 원본
-    └── bnd_dong_... .shp     # 행정동 경계 파일
-
-'''
+```text
+[Raw Data (.txt)]
+       │
+       ▼
+1. 1_전처리.R ──────────────────────────┐
+       │                                │
+       │ (Output: df.csv)               │ 행정동별 매출액/종사자 수 집계
+       │                                │
+       ▼                                │
+2. 2_shp결합.R ──────────────────────────┤
+       │                                │
+       │ (Input: bnd_dong.shp)          │ 통계 데이터 + 지도(Shapefile) 결합
+       │ (Output: merge2.shp)           │
+       │                                │
+       ▼                                │
+3. 3_공간통계.R ──────────────────────────┘
+       │
+       ├── Visualization (지도 시각화: Quantile/Jenks/Equal)
+       ├── Moran's I (공간 자기상관성 검증)
+       └── Hotspot Analysis (핫스팟/콜드스팟 도출)
+```
 
 ### [밀집지역 핫스팟과 콜드스팟]
 
