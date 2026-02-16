@@ -2,7 +2,11 @@
 * **전국 중소기업 데이터를 바탕으로 중소기업 기본 통계 분석을 진행.**
 
 * **2015년부터 2020년까지 중소기업 밀집지역 및 성장, 소멸 지역을 지도로 시각화.**
-  
+
+<br>
+
+**Directory Structure**
+
 ```text
 sme-basic-stats/
 ├── 📂 R/ # 핵심 분석 코드
@@ -38,6 +42,7 @@ sme-basic-stats/
 * 매출액 등 데이터의 왜도(Skewness)를 고려하여 세 가지 분류 방식(**Quantile, Jenks, Equal Interval**)을 비교 분석하였습니다.
 * 이를 통해 단순 순위뿐만 아니라 실제 경제력 집중 현상을 다각도로 시각화하였습니다.
 
+**Simulation Flowchart**
 ```text
 [Raw Data (.txt)]
        │
