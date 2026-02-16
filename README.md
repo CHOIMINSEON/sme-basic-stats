@@ -42,7 +42,9 @@ sme-basic-stats/
 * 매출액 등 데이터의 왜도(Skewness)를 고려하여 세 가지 분류 방식(**Quantile, Jenks, Equal Interval**)을 비교 분석하였습니다.
 * 이를 통해 단순 순위뿐만 아니라 실제 경제력 집중 현상을 다각도로 시각화하였습니다.
 
+
 **Simulation Flowchart**
+
 ```text
 [Raw Data (.txt)]
        │
